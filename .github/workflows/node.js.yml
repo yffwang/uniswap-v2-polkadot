@@ -28,4 +28,5 @@ jobs:
       - run: npm ci
       - run: npm install hardhat
       - run: npm install ethers
+      - run: npm install ws
       - run: npx hardhat test
