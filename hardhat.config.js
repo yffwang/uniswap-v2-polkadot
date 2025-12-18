@@ -33,24 +33,24 @@ module.exports = {
   networks: {
     hardhat: usePolkaNode && !useREVM
       ? {
-          polkavm: true,
-          nodeConfig: {
-            nodeBinaryPath: "../revive-dev-node-darwin-arm64",
-            rpcPort: 8000,
-            dev: true,
-          },
-          adapterConfig: {
-            adapterBinaryPath: "../eth-rpc-darwin-arm64",
-            dev: true,
-          },
-        }
+        polkavm: true,
+        nodeConfig: {
+          nodeBinaryPath: "../revive-dev-node-darwin-arm64",
+          rpcPort: 8000,
+          dev: true,
+        },
+        adapterConfig: {
+          adapterBinaryPath: "../eth-rpc-darwin-arm64",
+          dev: true,
+        },
+      }
       : {},
     pvmevm: {
       // EVM mode: connect to PVM node via ETH RPC
       url: "http://127.0.0.1:8545",
       accounts: [
         process.env.LOCAL_PRIV_KEY ??
-          "0x5fb92d6e98884f76de468fa3f6278f8807c48bebc13595d45af5bdc4da702133",
+        "0x5fb92d6e98884f76de468fa3f6278f8807c48bebc13595d45af5bdc4da702133",
       ],
       timeout: 60000,
       gas: "auto",
@@ -61,8 +61,9 @@ module.exports = {
       url: `http://127.0.0.1:8545`,
       accounts: [
         process.env.LOCAL_PRIV_KEY ??
-          "0x5fb92d6e98884f76de468fa3f6278f8807c48bebc13595d45af5bdc4da702133",
-        process.env.AH_PRIV_KEY ?? '',
+        "0x5fb92d6e98884f76de468fa3f6278f8807c48bebc13595d45af5bdc4da702133",
+        process.env.AH_PRIV_KEY ??
+        "0x271ad9a5e1e0178acebdb572f8755aac3463d863ddfc70e32e7d5eb0b334e687",
       ],
     },
     passetHub: {
@@ -71,7 +72,7 @@ module.exports = {
       accounts: [
         process.env.AH_PRIV_KEY ?? '',
         process.env.LOCAL_PRIV_KEY ??
-          "0x5fb92d6e98884f76de468fa3f6278f8807c48bebc13595d45af5bdc4da702133",
+        "0x5fb92d6e98884f76de468fa3f6278f8807c48bebc13595d45af5bdc4da702133",
       ],
     },
   },
