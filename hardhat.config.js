@@ -70,7 +70,8 @@ module.exports = {
       polkavm: true,
       url: "https://testnet-passet-hub-eth-rpc.polkadot.io",
       accounts: [
-        process.env.AH_PRIV_KEY ?? '',
+        process.env.AH_PRIV_KEY ??
+        "0x271ad9a5e1e0178acebdb572f8755aac3463d863ddfc70e32e7d5eb0b334e687",
         process.env.LOCAL_PRIV_KEY ??
         "0x5fb92d6e98884f76de468fa3f6278f8807c48bebc13595d45af5bdc4da702133",
       ],
