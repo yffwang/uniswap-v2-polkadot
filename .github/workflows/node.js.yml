@@ -28,4 +28,7 @@ jobs:
       - run: npm ci
       - run: npm install hardhat
       - run: npm install @parity/hardhat-polkadot@latest
+      - run: npm install
       - run: npx hardhat test
+      - run: ./local-start.sh
+      - run: npx hardhat test --network local
