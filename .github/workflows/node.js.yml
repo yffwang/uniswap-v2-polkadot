@@ -30,5 +30,6 @@ jobs:
       - run: npm install @parity/hardhat-polkadot@latest
       - run: npm install
       - run: npx hardhat test
+      - run: chmod +x ./local-start.sh
       - run: ./local-start.sh
       - run: npx hardhat test --network local
